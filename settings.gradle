@@ -15,4 +15,20 @@ include 'api'
 include 'services:webservice'
 */
 
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "org.springframework.boot") {
+                useModule('org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M3')
+            }
+        }
+    }
+    repositories {
+        maven {
+            url 'https://repo.spring.io/milestone'
+        }
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = 'kotlin-gradle-boilerplate'
