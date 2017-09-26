@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val kotlin_version by extra { "1.1.4" }
+val kotlin_version by extra { "1.1.50" }
 
 // The settings.gradle defines versions of the specified plugins
 plugins {

@@ -18,14 +18,15 @@ include 'services:webservice'
 pluginManagement {
     resolutionStrategy {
         eachPlugin {
+            // This is a trick to use milestone plugins
             if (requested.id.id == "org.springframework.boot") {
-                useModule('org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M3')
+                useModule('org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M4')
             }
         }
     }
     repositories {
         maven {
-            url 'https://repo.spring.io/milestone'
+            url 'https://repo.spring.io/libs-milestone'
         }
         gradlePluginPortal()
     }
